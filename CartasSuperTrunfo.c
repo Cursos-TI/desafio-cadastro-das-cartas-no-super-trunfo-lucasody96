@@ -10,6 +10,9 @@ int main() {
     float area1, area2; //Definindo as váriaveis de área.
     double pib1, pib2;//Definindo as váriaveis do PIB.
     int quantPontosTuristicos1, quantPontosTuristicos2; //Definindo a quantidade de pontos turísticos.
+    //Variáveis do desafio aventureiro
+    float densidadePopulacional1, densidadePopulacional2; //Definindo as variáveis de densidade populacional
+    float pibPerCapita1, pibPerCapita2;//Definindo as variáveis de PIB per Capita
 
     //Inserção dos dados pelo usuário
     printf("Bem vindo ao jogo Super Trunfo - Estados!\n");// Como foi solicitado variáveis referentes ao estado e não ao país, ajustei a introdução do desafio
@@ -80,6 +83,14 @@ int main() {
     printf("Segue abaixo a impressão dos dados cadastrados das duas cartas: \n");
     printf("\n");
 
+    //Cálculo da Densidade populacional
+    densidadePopulacional1 = (float)populacao1/area1;
+    densidadePopulacional2 = (float)populacao2/area2;
+
+    //Cálculo do Pib Per Capita
+    pibPerCapita1 = (float)pib1/populacao1;
+    pibPerCapita2 = (float)pib2/populacao2;
+
     //Impressão dos dados da carta 1
     printf("Carta 1: \n");
     printf("Estado: %c\n", estado1);
@@ -89,6 +100,8 @@ int main() {
     printf("Área: %.2f Km²\n", area1);
     printf("PIB: %.2f de reais\n", pib1);
     printf("Quantidade de pontos turísticos: %d\n", quantPontosTuristicos1);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidadePopulacional1);
+    printf("PIB per Capita: %.2f reais\n", pibPerCapita1);
     printf("\n");
 
     //Impressão dos dados da carta 2
@@ -100,6 +113,8 @@ int main() {
     printf("Área: %.2f Km²\n", area2);
     printf("PIB: %.2f de reais\n", pib2);
     printf("Quantidade de pontos turísticos: %d\n", quantPontosTuristicos2);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidadePopulacional2);
+    printf("PIB per Capita: %.2f reais\n", pibPerCapita2);
 
     return 0;
 }
